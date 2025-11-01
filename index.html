@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who Will Pay? - The Ultimate Decision Wheel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <meta name="description" content="Tired of arguing who pays the bill? Use our free online spinner wheel to randomly pick a name. Perfect for friends, family, and colleagues. Fast, fair, and fun!">
+</head>
+<body>
+
+    <meta name="description" content="Tired of arguing who pays the bill? Use our free online spinner wheel to randomly pick a name. Perfect for friends, family, and colleagues. Fast, fair, and fun!">
+</head>
+    <!-- Theme Toggle Switch -->
+    <div class="theme-switcher">
+        <input type="checkbox" id="theme-toggle">
+        <label for="theme-toggle" class="toggle-label">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+        </label>
+    </div>
+
+    <div class="app-wrapper">
+        <!-- Header with Navigation and Ad Space -->
+        <header class="app-header">
+            <h1>Who Will Pay?</h1>
+            <nav class="main-nav">
+                <a href="#" class="nav-link active-link" data-target="home-page">Home</a>
+                <a href="#" class="nav-link" data-target="about-page">About Us</a>
+                <a href="#" class="nav-link" data-target="contact-page">Contact Us</a>
+                <a href="#" class="nav-link" data-target="privacy-page">Privacy Policy</a>
+            </nav>
+            <!--Ad Space 
+            <div class="ad-container ad-container-header">
+                <p>Header Ad Space (e.g., 728x90)</p>
+            </div>
+        </header>
+        -->
+
+        <!-- Page Container -->
+        <main class="page-container">
+            <!-- PAGE 1: Home (The Spinner App) -->
+            <div id="home-page" class="page active">
+                <section class="controls-section">
+                    <h2><i class="fas fa-users"></i> Add Participants</h2>
+                    <div class="input-group">
+                        <input type="text" id="nameInput" placeholder="Enter a name...">
+                        <button id="addNameBtn" title="Add Name"><i class="fas fa-plus"></i> Add</button>
+                    </div>
+                    <div id="nameList" class="name-list"></div>
+                </section>
+
+                <section class="wheel-section">
+                    <div class="pointer"></div>
+                    <canvas id="spinnerWheel" width="450" height="450"></canvas>
+                    <button id="spinBtn">SPIN</button>
+                </section>
+            </div>
+
+            <!-- PAGE 2: About Us -->
+            <div id="about-page" class="page static-page">
+                <h2>About Us</h2>
+                <p>Welcome to "Who Will Pay?", the ultimate tool for making fair and fun decisions! Whether you're trying to decide who gets the next round of drinks, who has to do the dishes, or any other group choice, our spinner wheel is here to help.</p>
+                <p>Our mission is simple: to eliminate arguments and indecision with a single spin. Just add the names of the participants, hit the spin button, and let fate decide. It's fast, easy, and always impartial.</p>
+            </div>
+
+            <!-- PAGE 3: Contact Us -->
+            <div id="contact-page" class="page static-page">
+                <h2>Contact Us</h2>
+                <p>Have questions, feedback, or suggestions? We'd love to hear from you! Please fill out the form below or email us directly at <a href="mailto:mukulrajsingh932@gmail.com">mukulrajsingh932@gmail.com</a>.</p>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="contactName">Name</label>
+                        <input type="text" id="contactName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Email</label>
+                        <input type="email" id="contactEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">Message</label>
+                        <textarea id="contactMessage" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+
+            <!-- PAGE 4: Privacy Policy -->
+            <div id="privacy-page" class="page static-page">
+                <h2>Privacy Policy</h2>
+                <p>Your privacy is important to us. This Privacy Policy explains how we handle your information.</p>
+                <h3>Information We Collect</h3>
+                <p>We do not collect any personal information. The names you enter into the spinner wheel are stored only in your browser's local session and are not sent to our servers. Once you close the browser tab, this information is gone.</p>
+                <h3>Cookies</h3>
+                <p>We use local storage to save your theme preference (dark or light mode). This is a simple key-value pair and does not track you across other websites.</p>
+                
+            </div>
+        </main>
+
+        <!-- Footer 
+        <footer class="app-footer">
+            <div class="ad-container ad-container-footer">
+                <p>Footer Ad Space (e.g., 728x90)</p>
+            </div>
+            <p class="copyright">&copy; 2025 Who Will Pay?</p>
+        </footer>
+    </div>
+    -->
+    
+
+    <!-- Winner Pop-up -->
+    <div id="popup" class="popup-container">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <p id="winnerMessage"></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
